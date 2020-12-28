@@ -9,7 +9,12 @@ const forecast = (latitude, longitude, callback)=>{
         } else if(body.error){
             callback("unable to find location", undefined)
         } else {
-            callback(undefined, body.current.weather_descriptions[0]+" ,It is currently "+body.current.temperature+" degrees out, It feels like "+body.current.feelslike+" degree out. There is "+body.current.precip+"% chance of rain"
+            if(body.current.is_day=='yes'){
+                var day = "Its morning"
+            }else{
+                var day = "Its night"
+            }
+            callback(undefined, body.current.weather_descriptions[0]+" ,It is currently "+body.current.temperature+" degrees out, It feels like "+body.current.feelslike+" degree out. There is "+body.current.precip+"% chance of rain and "+day
             )
         }
     })
