@@ -51,7 +51,10 @@ footer h3{
 }
 
 img{
-    width: 40%;
+    width: 50%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .head {
@@ -60,6 +63,7 @@ img{
     color: white;
     font-weight: 500;
     padding: 10px;
+    line-height: 1.5;
     text-align: center;
 }
 
